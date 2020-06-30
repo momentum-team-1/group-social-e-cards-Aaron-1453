@@ -46,11 +46,14 @@ You _can_ work with your partner to get the back-end API running on your local m
 
 You can design your front-end to have whatever components you think are necessary. A suggested layout is below. A few notes: `Route` is from react-router, nesting shows what children each component might have, and several components are re-used under different routes. This is a non-exhaustive list and created from sketching on paper.
 
-- App - Header - LoginControl - Menubar
+- App 
+  - Header 
+    - LoginControl 
+      - Menubar
   - Route /
     - CardList
       - Card - LikeButton
-  - Route /all
+  - Route /all4
     - CardList
       - Card
         - LikeButton
