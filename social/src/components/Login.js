@@ -10,7 +10,7 @@ class Login extends React.Component {
     this.state = {
       username: 'username',
       password: '',
-      token: 'testtoken',
+      token: localStorage.getItem('login_auth_token'),
       error: null,
       cards: []
     }
@@ -55,7 +55,7 @@ class Login extends React.Component {
   }
 
   render () {
-    console.log(this.state.cards)
+    // console.log(this.state.cards)
     return (
       <div className='App bg-light-yellow min-vh-100 pt5'>
         <div className='bg-white pa3 center shadow-1 mw6'>
@@ -90,7 +90,7 @@ class Login extends React.Component {
                     />
                   </div>
                   <div className='mt3'>
-                    <button type='submit' className='pointer f6 dim ph3 pv2 mb2 white bg-black bn'>Button Text</button>
+                    <button type='submit' className='pointer f6 dim ph3 pv2 mb2 white bg-black bn'>Sumbit</button>
                   </div>
                 </form>
               )

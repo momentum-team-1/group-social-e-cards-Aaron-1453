@@ -6,7 +6,7 @@ function Home () {
   return (
     <>
       <Nav />
-      <h1>PAGE</h1>
+      <h1>HOMEPAGE</h1>
     </>
   )
 }
