@@ -27,7 +27,7 @@ const Login = (props) => {
         }
       })
   }
-  console.log(token)
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <p className='title'>Fumo eCards</p>

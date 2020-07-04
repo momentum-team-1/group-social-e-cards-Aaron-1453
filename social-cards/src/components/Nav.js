@@ -1,14 +1,12 @@
 /* globals localStorage */
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Nav = (props) => {
-  const handleLogout = (event) => {
-    event.preventDefault()
-
+  const handleLogout = () => {
     localStorage.removeItem('login_username')
     localStorage.removeItem('login_auth_token')
-    window.location.assign('/')
   }
 
   return (
@@ -19,11 +17,11 @@ const Nav = (props) => {
       </div>
       <div className='navbar-menu'>
         <div className='navbar-start'>
-          <a style={{ ' a:hover': 'yellow' }} className='navbar-item has-text-white' href='http://google.com'>Friends List</a>
-          <a className='navbar-item has-text-white' href='http://google.com'>Cards</a>
+          <Link className='navbar-item has-text-white' to='/'>Friends List </Link>
+          <Link to='/cards/all/' className='navbar-item has-text-white'>Cards</Link>
         </div>
         <div className='navbar-end' style={{ display: 'flex', alignItems: 'center' }}>
-          <button className='button' onClick={(event) => handleLogout(event)}>Logout</button>
+          <Link to='/' className='button' onClick={() => handleLogout()}>Logout</Link>
         </div>
       </div>
     </nav>
