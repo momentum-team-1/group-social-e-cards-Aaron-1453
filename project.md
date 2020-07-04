@@ -53,7 +53,7 @@ You can design your front-end to have whatever components you think are necessar
   - Route /
     - CardList
       - Card - LikeButton
-  - Route /all4
+  - Route /all
     - CardList
       - Card
         - LikeButton
