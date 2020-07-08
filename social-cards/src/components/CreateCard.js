@@ -31,10 +31,10 @@ const CreateCard = () => {
   // to keep track of user input from the form
   // i.e. const [body, setBody] = useState('')
 
-  const [body, setBody] = useState('')
+  const [text, setText] = useState('')
   const [img, setImg] = useState('')
-  const [fontColor, setFontColor] = useState('')
-  const [fontStyle, setFontStyle] = useState('')
+  const [fontColor, setFontColor] = useState('#153243')
+  const [fontStyle, setFontStyle] = useState('Lora')
 
   const baseUrl = 'http://localhost:3000'
 
@@ -48,6 +48,17 @@ const CreateCard = () => {
     if (fontStyleOptions.includes(event.target.value)) {
       setFontStyle(event.target.value)
     }
+    // console.log('fontColorOptions:', fontColorOptions)
+    if ((fontColorOptions).map(value => value.hex).includes(event.target.value)) {
+      // console.log(Object.values(fontColorOptions))
+      setFontColor(event.target.value)
+    }
+    if (body)
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    document.getElementById('cardText').submit()
   }
 
   return (
@@ -61,10 +72,14 @@ const CreateCard = () => {
       <form>
         <label htmlFor='card-img-url'>Card Image Url:</label>
         <input type='text' id='card-img-url' name='card-img-url' />
+
         <label htmlFor='cardText'>Card Message:</label>
         <textarea id='cardText' name='cardText' />
+        <input type='button' onClick={(event) => handleSubmit(event)} value='submit message' />
+
         <label htmlFor='color-options'>Font Color:</label>
         <select
+          onChange={(event) => handleChange(event)}
           name='color-options'
           id='color-options'
         >
