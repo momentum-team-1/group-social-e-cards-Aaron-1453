@@ -22,7 +22,7 @@ const FriendsList = () => {
         <Nav username={localStorage.getItem('login_username')} />}
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         {friends.map((friend) => {
-          return (<User key={`${friend.username}-${friend.id}`} friend={friend} />)
+          return (<User key={friend} friend={friend} />)
         })}
       </div>
     </div>

@@ -6,7 +6,7 @@ const Card = (props) => {
       <div className='card'>
         <div className='card-image'>
           <figure className='image is-4by3'>
-            <img src='https://bulma.io/images/placeholders/1280x960.png' alt={`${props.card.id}-placeholder-img`} />
+            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1920px-Welchcorgipembroke.JPG' alt={`${props.card.id}-placeholder-img`} />
           </figure>
         </div>
         <div className='card-content' style={{ overflow: 'auto', background: props.card.color }}>
