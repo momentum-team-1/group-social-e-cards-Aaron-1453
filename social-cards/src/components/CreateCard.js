@@ -65,7 +65,7 @@ const CreateCard = () => {
       <Nav username={localStorage.getItem('login_username')} />
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} />
       <p>
-          Triangle localista sodu the buehler corcoran baromsg spekulera i hausse plaid ccb plaza upcycled, historic preservation haussier barilotto urban farmer haussier city center pousser la hausse poliai, mascul beard brick kocaman erkek hayvan ballpark cupcakes upcycled. Yoga biker bar nevermore duke forest doughman black wall street, reproductor scrap exchange bula papal bula, coffee liberty gregson street specula la burs. Hub kocaman erkek hayvan baseball sustain-a-bull blbost wool e bull haussista festival for the eno, renaissance hope valley carolina theatre food truck rodeo scooter the kress
+     Create your card here! Don't forget to write a message so you know the intended recipient feels the love!
       </p>
       <form>
         <label htmlFor='card-img-url'>Card Image Url:</label>
