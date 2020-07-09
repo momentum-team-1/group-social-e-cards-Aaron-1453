@@ -12,7 +12,8 @@ const Card = (props) => {
         <div className='card-content' style={{ overflow: 'auto', background: props.card.color }}>
           <div className='content' style={{ background: 'white' }}>
             <p>{props.card.message}</p>
-            <p>From: {props.card.author.username}</p>
+            {console.log(props.card.author)}
+            <p>From: {props.card.author}</p>
             <p>{props.card.posted_at}</p>
           </div>
         </div>

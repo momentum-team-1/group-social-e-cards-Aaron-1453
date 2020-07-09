@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: 'http://localhost:4000/api'
+  baseURL: 'https://fumo-e-cards.herokuapp.com/api'
 })
 
 export const getToken = (username, password) => {
@@ -12,7 +12,7 @@ export const getToken = (username, password) => {
 }
 
 export const getAllCards = (token) => {
-  return request.get('/cards/all/', {
+  return request.get('/cards/all_cards/', {
     headers: {
       Authorization: `Token ${token}`
     }
@@ -20,7 +20,7 @@ export const getAllCards = (token) => {
 }
 
 export const getFriendsCards = (token) => {
-  return request.get('/cards/', {
+  return request.get('/cards/follower_cards/', {
     headers: {
       Authorization: `Token ${token}`
     }
@@ -28,7 +28,7 @@ export const getFriendsCards = (token) => {
 }
 
 export const getMyCards = (token) => {
-  return request.get('/cards/me/', {
+  return request.get('/cards/', {
     headers: {
       Authorization: `Token ${token}`
     }
@@ -43,10 +43,10 @@ export const getFriends = (token) => {
   }).then(res => res.data)
 }
 
-export const CreateCard = (token) => {
-  return request.post('/cards/', {
-    headers: {
-      Authorization: `Token ${token}`
-    }
-  }).then(res => res.data.results)
-}
+// export const CreateCard = (token) => {
+//   return request.post('/cards/', {
+//     headers: {
+//       Authorization: `Token ${token}`
+//     }
+//   }).then(res => res.data.results)
+// }

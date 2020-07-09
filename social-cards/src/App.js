@@ -13,7 +13,7 @@ const App = () => {
     <Switch>
       <Route exact path='/' component={Login} />
       <Route path='/auth/users/me/' component={Profile} />
-      <Route path='/cards/all/' component={CardList} />
+      <Route path='/cards/all_cards/' component={CardList} />
       <Route path='/friends/' component={FriendsList} />
       <Route path='/cards/' component={CreateCard} />
     </Switch>

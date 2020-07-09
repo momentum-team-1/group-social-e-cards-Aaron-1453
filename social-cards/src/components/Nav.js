@@ -20,7 +20,7 @@ const Nav = (props) => {
       <div className='navbar-menu'>
         <div className='navbar-start'>
           <Link className='navbar-item has-text-white' to='/friends/'>Friends List </Link>
-          <Link to='/cards/all/' className='navbar-item has-text-white'>Cards</Link>
+          <Link to='/cards/all_cards/' className='navbar-item has-text-white'>Cards</Link>
           <Link to='/cards/' className='navbar-item has-text-white'> Create a Card</Link>
         </div>
         <div className='navbar-end' style={{ display: 'flex', alignItems: 'center' }}>

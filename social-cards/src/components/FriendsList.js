@@ -9,7 +9,7 @@ const FriendsList = () => {
   const [friends, setFriends] = useState([])
   const [isLoading, setIsLoading] = useState('true')
 
-  const baseUrl = 'http://localhost:3000'
+  const baseUrl = 'https://fumo-e-cards.herokuapp.com/api'
 
   useEffect(() => {
     getFriends(localStorage.getItem('login_auth_token')).then((friends) => { setFriends(friends); setIsLoading(false) })

@@ -9,7 +9,7 @@ const Profile = () => {
     <div>
       <Nav username={localStorage.getItem('login_username')} />
       <p className='title'>Hello, {localStorage.getItem('login_username')}  </p>
-      <CardList />
+      <CardList hideNav />
     </div>
   )
 }

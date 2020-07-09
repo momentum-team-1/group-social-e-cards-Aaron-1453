@@ -10,7 +10,7 @@ const CardList = (props) => {
   const [option, setOption] = useState('all')
   const [isLoading, setIsLoading] = useState('true')
 
-  const baseUrl = 'http://localhost:3000'
+  const baseUrl = 'https://fumo-e-cards.herokuapp.com/api'
 
   useEffect(() => {
     if (localStorage.getItem('login_auth_token') && option === 'all') {
@@ -47,7 +47,7 @@ const CardList = (props) => {
 
   return (
     <div>
-      {window.location.href === `${baseUrl}/cards/all/` &&
+      {props.hideNav ||
         <Nav username={localStorage.getItem('login_username')} />}
       {buildDropdown()}
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
