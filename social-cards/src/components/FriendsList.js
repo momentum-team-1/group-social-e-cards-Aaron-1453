@@ -15,11 +15,9 @@ const FriendsList = () => {
     getFriends(localStorage.getItem('login_auth_token')).then((friends) => { setFriends(friends); setIsLoading(false) })
   }, [])
 
-  console.log(friends)
   return (
     <div>
-      {window.location.href === `${baseUrl}/friends/` &&
-        <Nav username={localStorage.getItem('login_username')} />}
+      <Nav username={localStorage.getItem('login_username')} />
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         {friends.map((friend) => {
           return (<User key={friend} friend={friend} />)
